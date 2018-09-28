@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>display flex</title>
+	<style type="text/css">
+	body{
+	}
+
+
+	.flex-test{
+
+		display: -webkit-flex;/* 用于webkit内核的浏览器(safari)中使用*/
+		display: flex;/* 或者 inline-flex*/
+
+		/* 内容内部子项目的展示方向,可分为4种:
+			1.row 			:正常排序从左往右
+			2.row-reverse 	:从右往左
+			3.column 		:列正序从上往下
+			4.column-reve 	:列倒序从下往上
+			*/
+			flex-direction: row;
+
+			/* 表示当前容器内部内容超出容器时,可分为3种:
+				1.nowrap		:默认,不分行
+				2.wrap 			:超出的部分,分行处理
+				3.wrap-revers	:分行逆序
+				*/
+				flex-wrap: nowrap;
+
+				/* 可以将上面两个属性合起来写*/
+				/* flex-flow: row warp; */
+
+
+			/* 用于容器内部的子项目的水平对齐方式,可分为6种：
+				1.flex-start	:水平向左对齐
+				2.flex-end		:水平向右对齐
+				3.center 		:居中对齐
+				4.space-between	:每个元素之间会留出空隙,两边无间隙
+				5.space-around	:每个元素之间的间隙一样
+				6.space-evenly	:每个元素之间的间隙大小一致;
+				*/
+				justify-content: center;
+
+				/* 容器内部的子项目垂直方向上的对齐方式，可分为5种:
+					1.flex-start	:垂直向上对齐
+					2.flex-end		:垂直向下对齐
+					3.center 		:垂直居中对齐
+					4.stretch 		:将整个子项目的长度拉伸到最大的高度
+					5.baseline 		:以子项目内部的文字基线对齐
+					*/
+					align-items: center;
+
+					/*  在对行的情况下,每行所对应的垂直向上的对齐方式,可分为6种:
+						1.flex-start 	:每行在垂直向上向上对齐的方式	
+						2.flex-end 		:每行在垂直向上向下对齐的方式
+						3.center 		:每行在垂直向上居中对齐的方式
+						4.stretch 		:每行延展到铺满整个垂直方向
+						5.space-between	:每行之间留有空隙,而且两边没有空隙
+						6.space-around 	:每行周围的空隙均相等
+						*/
+						align-content: flex-start;
+	}
+
+	.flex-test > div{
+		width: 100px;
+		flex: 1;
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+	<div class="flex-test">
+		<div style="background-color: yellow;flex-grow: 1">1</div>
+		<div style="background-color: green;flex-grow: 2">2</div>
+		<div style="background-color: aqua;flex-grow: 3">3</div>
+		<div style="background-color: orange;flex-grow: 4">4</div>
+		<div style="background-color: black;flex-grow: 5">5</div>
+		
+	</div>
+</body>
+</html>
