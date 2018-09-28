@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		grid
+	</title>
+	<style type="text/css">
+		.item1{
+			grid-area: tp;
+			height: 10rem;
+		}.item2{
+			grid-area: lf;
+		}.item3{
+			grid-area: ct;
+		}.item4{
+			grid-area: ri;
+		}.item5{
+			grid-area: bt;
+		}
+
+		.grid-container{
+			display: grid;
+			grid-template-areas: 
+			'tp tp tp tp tp tp '
+			'lf lf ct ct ct ri '
+			'bt bt bt bt bt ri ';
+			grid-gap: 10px;	
+			background-color: aqua;
+			padding: 10px;
+		}
+
+		.grid-container > div{
+			background-color: orange;
+			text-align: center;
+			padding: 10px;
+		}
+
+		
+
+	</style>
+</head>
+<body>
+	<div class="grid-container">
+		<div class="item1">top</div>
+		<div class="item2">left</div>
+		<div class="item3">center</div>
+		<div class="item4">rihgt</div>
+		<div class="item5">bottom</div>
+
+	</div>
+</body>
+</html>
