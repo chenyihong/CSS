@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
-		grid
-	</title>
+	<title>grid</title>
 	<style type="text/css">
 		.item1{
 			grid-area: tp;
@@ -17,7 +15,6 @@
 		}.item5{
 			grid-area: bt;
 		}
-
 		.grid-container{
 			display: grid;
 			grid-template-areas: 
@@ -28,15 +25,11 @@
 			background-color: aqua;
 			padding: 10px;
 		}
-
 		.grid-container > div{
 			background-color: orange;
 			text-align: center;
 			padding: 10px;
 		}
-
-		
-
 	</style>
 </head>
 <body>
